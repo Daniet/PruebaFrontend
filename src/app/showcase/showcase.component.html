@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 l12 center-align title">
+      <h2>
+        <span>
+          Recien
+        </span>llegados
+      </h2>
+      <small>
+        Lo último de nuestra tienda
+      </small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m6 l4 product" *ngFor="let product of products">
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <img src="{{ product.url_img }}" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s9 m9 l9 product-name">
+          {{ product.name_product }}
+        </div>
+        <div class="col s3 m3 l3">
+          <div class="product-size">
+            {{ product.size }}
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col s7 m6 l7">
+          {{ product.brand }}
+          {{ product.collection }}
+        </div>
+        <div class="col s5 m6 l5 product-price">
+          ${{ product.price | number }}
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12 product-profile center-align">
+          <img src="{{ product.seller_img }}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
