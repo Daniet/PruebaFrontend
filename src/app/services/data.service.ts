@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  constructor() { }
+  constructor() {
+    console.log('Inicio de servicio')
+  }
 
   getProducts(){
     return [{

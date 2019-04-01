@@ -13,7 +13,9 @@ export class ShowcaseComponent implements OnInit {
 
   constructor(
     private dataService:DataService
-  ) { }
+  ) {
+    console.log('Inicio de componente')
+  }
 
   ngOnInit() {
     this.products = this.dataService.getProducts()
